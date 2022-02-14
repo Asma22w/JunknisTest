@@ -17,8 +17,11 @@ pipeline {
 	    }
         stage('Run') {
 		steps {
-		  sh' docker image build -t myapp .'
-                  sh'docker run -it -p 3000:3000 -d myapp'				
+		 	
+		  sh'sudo docker image build -t myapp .'
+			
+                  sh'sudo docker run -it -p 3000:3000 -d myapp'
+			
 		}
                       
         }
